@@ -72,7 +72,7 @@ Open `http://127.0.0.1:5000/docs/` in your browser:
 
 ---
 
-<p align="center"><i>webtypes is <a href="https://github.com/tomchristie/webtypes/blob/master/LICENSE.md">BSD licensed</a> code.<br/>Designed & built in Brighton, England.</i>
+<p align="center"><i>webtypes is <a href="https://github.com/tomchristie/webtypes/blob/master/LICENSE.md">BSD licensed</a> code.</i>
 <p align="center">
     <img src="https://raw.githubusercontent.com/abetkin/webtypes/master/docs/img/ident-44-square-light.png" alt="webtypes" />
 </p>
