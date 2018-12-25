@@ -20,7 +20,7 @@
 
 **Community:** https://discuss.apistar.org 🤔 💭 🤓 💬 😎
 
-**Documentation:** https://docs.webtypes.com 📘
+**Documentation:** https://abetkin.github.io/webtypes 📘
 
 ---
 
