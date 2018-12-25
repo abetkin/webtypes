@@ -3,7 +3,7 @@ import os
 
 import pytest
 
-from apistar.codecs import JSONSchemaCodec
+from webtypes.codecs import JSONSchemaCodec
 
 filenames = [
     'additionalItems.json',

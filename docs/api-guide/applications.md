@@ -6,7 +6,7 @@ is to create an application instance.
 Here's an example that just returns a simple HTML homepage:
 
 ```python
-from apistar import App, Route
+from webtypes import App, Route
 
 
 def homepage() -> str:
@@ -40,7 +40,7 @@ Once you're using `ASyncApp` you'll be able to route to either standard
 functions, or to `async` functions.
 
 ```python
-from apistar import ASyncApp, Route
+from webtypes import ASyncApp, Route
 
 async def hello_world() -> dict:
     # We can perform some network I/O here, asyncronously.

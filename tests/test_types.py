@@ -2,8 +2,8 @@ import datetime
 
 import pytest
 
-from apistar import exceptions, types, validators
-from apistar.utils import encode_jsonschema
+from webtypes import exceptions, types, validators
+from webtypes.utils import encode_jsonschema
 
 utc = datetime.timezone.utc
 

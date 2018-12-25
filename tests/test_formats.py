@@ -2,7 +2,7 @@ import datetime
 
 import pytest
 
-from apistar import exceptions, types, validators
+from webtypes import exceptions, types, validators
 
 UTC = datetime.timezone.utc
 

@@ -1,5 +1,5 @@
-from apistar import Route, test, types, validators
-from apistar.server.app import App
+from webtypes import Route, test, types, validators
+from webtypes.server.app import App
 
 
 def str_path_param(param: str):

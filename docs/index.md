@@ -1,20 +1,20 @@
 <div style="float: right">
-    <a href="https://travis-ci.org/encode/apistar"><img style="border: none; background-color: transparent; margin: 0" alt="Build Status" src="https://travis-ci.org/encode/apistar.svg?branch=master"></a>
-    <a href="https://codecov.io/gh/encode/apistar"><img style="border: none; background-color: transparent; margin: 0" alt="codecov" src="https://codecov.io/gh/encode/apistar/branch/master/graph/badge.svg"></a>
-    <a href="https://pypi.python.org/pypi/apistar"><img style="border: none; background-color: transparent; margin: 0" alt="Package version" src="https://badge.fury.io/py/apistar.svg"></a>
+    <a href="https://travis-ci.org/abetkin/webtypes"><img style="border: none; background-color: transparent; margin: 0" alt="Build Status" src="https://travis-ci.org/abetkin/webtypes.svg?branch=master"></a>
+    <a href="https://codecov.io/gh/abetkin/webtypes"><img style="border: none; background-color: transparent; margin: 0" alt="codecov" src="https://codecov.io/gh/abetkin/webtypes/branch/master/graph/badge.svg"></a>
+    <a href="https://pypi.python.org/pypi/webtypes"><img style="border: none; background-color: transparent; margin: 0" alt="Package version" src="https://badge.fury.io/py/webtypes.svg"></a>
 </div>
 
-# API Star
+# webtypes
 
-A smart Web API framework, designed for Python 3.
+This is a fork of [API Star](https://github.com/encode/apistar) 0.5.*
 
-<!-- [![Build Status](https://travis-ci.org/encode/apistar.svg?branch=master)](https://travis-ci.org/encode/apistar)
-[![codecov](https://codecov.io/gh/encode/apistar/branch/master/graph/badge.svg)](https://codecov.io/gh/encode/apistar)
-[![Package version](https://badge.fury.io/py/apistar.svg)](https://pypi.python.org/pypi/apistar) -->
+<!-- [![Build Status](https://travis-ci.org/abetkin/webtypes.svg?branch=master)](https://travis-ci.org/abetkin/webtypes)
+[![codecov](https://codecov.io/gh/abetkin/webtypes/branch/master/graph/badge.svg)](https://codecov.io/gh/abetkin/webtypes)
+[![Package version](https://badge.fury.io/py/webtypes.svg)](https://pypi.python.org/pypi/webtypes) -->
 
 **Community:** [https://discuss.apistar.org/](https://discuss.apistar.org/) 🤔 💭 🤓 💬 😎
 
-**Repository**: [https://github.com/encode/apistar](https://github.com/encode/apistar) 💻
+**Repository**: [https://github.com/abetkin/webtypes](https://github.com/abetkin/webtypes) 💻
 
 ---
 
@@ -23,13 +23,13 @@ A smart Web API framework, designed for Python 3.
 Install API Star:
 
 ```bash
-$ pip3 install apistar
+$ pip3 install webtypes
 ```
 
 Create a new project in `app.py`:
 
 ```python
-from apistar import App, Route
+from webtypes import App, Route
 
 
 def welcome(name=None):

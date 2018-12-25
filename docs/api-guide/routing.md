@@ -3,7 +3,7 @@
 Use `{curly_braces}` in your URL conf to include a URL path parameter.
 
 ```python
-from apistar import App, Route
+from webtypes import App, Route
 
 
 def echo_username(username: str) -> dict:
@@ -20,7 +20,7 @@ app = App(routes=routes)
 Use type annotation on a handler to match integers or floats in the URL string.
 
 ```python
-from apistar import App, Route, exceptions
+from webtypes import App, Route, exceptions
 
 
 USERS = {1: 'hazel', 2: 'james', 3: 'ana'}
@@ -53,7 +53,7 @@ app = App(routes=routes)
 You can generate URL strings that match your routing configuration by using `app.reverse_url(name, **parameters)`.
 
 ```python
-from apistar import App, Route, exceptions
+from webtypes import App, Route, exceptions
 
 
 USERS = {1: 'hazel', 2: 'james', 3: 'ana'}
@@ -90,7 +90,7 @@ Use `Include` to add a list of routes under a single URL prefix.
 **myproject/users.py**
 
 ```python
-from apistar import App, Route, exceptions
+from webtypes import App, Route, exceptions
 
 
 USERS = {1: 'hazel', 2: 'james', 3: 'ana'}
@@ -120,7 +120,7 @@ routes = [
 **app.py:**
 
 ```python
-from apistar import App, Include
+from webtypes import App, Include
 from myproject import users
 
 routes = [

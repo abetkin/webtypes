@@ -7,6 +7,6 @@ fi
 
 set -x
 
-${PREFIX}flake8 apistar tests
-${PREFIX}isort apistar tests --recursive --check-only
-#${PREFIX}mypy apistar tests --ignore-missing-imports
+${PREFIX}flake8 webtypes tests
+${PREFIX}isort webtypes tests --recursive --check-only
+#${PREFIX}mypy webtypes tests --ignore-missing-imports

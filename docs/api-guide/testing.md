@@ -11,7 +11,7 @@ library, allowing you to make requests directly to your application.
 You can use the API test client with *any* WSGI or ASGI application.
 
 ```python
-from apistar import test
+from webtypes import test
 from myproject import app
 
 

@@ -6,7 +6,7 @@ application, at `'/schema/'`.
 Let's take a look at that with a short example...
 
 ```python
-from apistar import App, Route
+from webtypes import App, Route
 
 
 def welcome(name=None):

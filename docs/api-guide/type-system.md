@@ -8,7 +8,7 @@ expected inputs and outputs of your interface.
 Here’s a quick example of what the type system in API Star looks like:
 
 ```python
-from apistar import types, validators
+from webtypes import types, validators
 
 
 class Product(types.Type):
@@ -26,7 +26,7 @@ Invalid data will result in a `ValidationError` being raised.
 ```python
 >>> data = {'name': 't-shirt', 'size': 'big'}
 >>> product = Product(data)
-apistar.exceptions.ValidationError: {'rating': 'This field is required.', 'size': 'Must be a valid choice.'}
+webtypes.exceptions.ValidationError: {'rating': 'This field is required.', 'size': 'Must be a valid choice.'}
 ```
 
 Valid data will instantiate a new `Type` instance.
@@ -112,7 +112,7 @@ you can include these by subclass the `__init__` method on the class.
 This method should return the validated data, or raise a `ValidationError`.
 
 ```python
-from apistar import exceptions, types, validators
+from webtypes import exceptions, types, validators
 
 
 class Organisation(types.Type):
@@ -224,7 +224,7 @@ The following validators return a native python representation, but can be seria
 Let's declare a new type to see how they work...
 
 ```python
-from apistar import types, validators
+from webtypes import types, validators
 
 
 class Event(types.Type):

@@ -9,8 +9,8 @@ if they are included in an annotation.
 Here's an example that makes the `User` annotation available to handler functions.
 
 ```python
-from apistar import App, Route, exceptions, http
-from apistar.server.components import Component
+from webtypes import App, Route, exceptions, http
+from webtypes.server.components import Component
 
 
 class User(object):

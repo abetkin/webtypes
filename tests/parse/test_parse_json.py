@@ -1,10 +1,10 @@
 import pytest
 
-from apistar import validators
-from apistar.exceptions import (
+from webtypes import validators
+from webtypes.exceptions import (
     ErrorMessage, Marker, ParseError, ValidationError
 )
-from apistar.parse import parse_json
+from webtypes.parse import parse_json
 
 VALIDATOR = validators.Object(
     properties={

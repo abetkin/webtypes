@@ -1,0 +1,21 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+codecov = "*"
+flake8 = "*"
+isort = "*"
+pytest = "*"
+pytest-cov = "*"
+# Optional
+aiofiles = "*"
+whitenoise = "*"
+Jinja2 = "*"
+
+[packages]
+click = "*"
+requests = "*"
+PyYAML = "*"
+Werkzeug = "*"

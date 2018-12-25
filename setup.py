@@ -52,21 +52,21 @@ def get_long_description(long_description_file):
 
 
 
-version = get_version('apistar')
+version = get_version('webtypes')
 
 
 setup(
-    name='apistar',
+    name='webtypes',
     version=version,
-    url='http://www.encode.io/apistar/',
+    url='http://www.encode.io/webtypes/',
     license='BSD',
     description='Blazingly fast & beautifully expressive Web APIs',
     long_description=get_long_description('README.md'),
     long_description_content_type='text/markdown',
-    author='Tom Christie',
-    author_email='tom@tomchristie.com',
-    packages=get_packages('apistar'),
-    package_data=get_package_data('apistar'),
+    author='Vitalii Abetkin',
+    author_email='abvit89@gmail.com',
+    packages=get_packages('webtypes'),
+    package_data=get_package_data('webtypes'),
     install_requires=[
         'click',
         'jinja2',
@@ -91,7 +91,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'apistar=apistar:main'
+            'webtypes=webtypes:main'
         ],
     },
 )

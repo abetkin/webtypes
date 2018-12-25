@@ -6,7 +6,7 @@ To access the incoming HTTP request, use the `http.Request` class as an
 annotation on the handler function.
 
 ```python
-from apistar import http
+from webtypes import http
 
 
 def echo_request_info(request: http.Request) -> dict:
@@ -22,7 +22,7 @@ API Star allows you to dynamically inject various other information about the
 incoming request into your views using type annotation.
 
 ```python
-from apistar import http
+from webtypes import http
 
 
 def echo_query_params(query_params: http.QueryParams) -> dict:
@@ -61,7 +61,7 @@ For more control over the response use the `JSONResponse` and
 `HTMLResponse` classes.
 
 ```python
-from apistar import http
+from webtypes import http
 
 
 def hello_world(accept_language: http.Header) -> http.JSONResponse:
@@ -77,7 +77,7 @@ For other content types, use a `Response` class, and set the content-type
 header explicitly.
 
 ```python
-from apistar import http
+from webtypes import http
 
 
 def hello_world() -> http.Response:

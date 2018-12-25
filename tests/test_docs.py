@@ -1,4 +1,4 @@
-from apistar import App, ASyncApp, TestClient
+from webtypes import App, ASyncApp, TestClient
 
 async_app = ASyncApp(routes=[])
 async_test_client = TestClient(async_app)

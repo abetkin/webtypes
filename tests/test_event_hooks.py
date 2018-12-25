@@ -1,6 +1,6 @@
 import pytest
 
-from apistar import App, Component, Route, http, test
+from webtypes import App, Component, Route, http, test
 
 ON_ERROR = None
 

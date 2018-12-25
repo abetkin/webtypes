@@ -1,7 +1,7 @@
 import typing
 
-from apistar import App, Route, TestClient, types, validators
-from apistar.server.handlers import serve_schema
+from webtypes import App, Route, TestClient, types, validators
+from webtypes.server.handlers import serve_schema
 
 
 class User(types.Type):

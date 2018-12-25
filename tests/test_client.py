@@ -2,7 +2,7 @@ import os
 
 import pytest
 
-from apistar import (
+from webtypes import (
     App, Client, Document, Field, Include, Link, Route, Section, TestClient,
     exceptions, http
 )

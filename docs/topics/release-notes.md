@@ -38,11 +38,11 @@
 
 ### 0.5.32
 
-* Add 'swaggerui' option to `docs/theme`, alongside existing 'redoc', 'apistar'.
+* Add 'swaggerui' option to `docs/theme`, alongside existing 'redoc', 'webtypes'.
 
 ### 0.5.31
 
-* Add 'docs/theme' section to `.apistar.yml` config file validation.
+* Add 'docs/theme' section to `.webtypes.yml` config file validation.
 
 ### 0.5.30
 
@@ -50,7 +50,7 @@
 
 ### 0.5.29
 
-* Initial support for validating `.apistar.yml` config file.
+* Initial support for validating `.webtypes.yml` config file.
 
 ### 0.5.28
 
@@ -117,7 +117,7 @@
 
 ### 0.5.13
 
-* Added `apistar docs <schema>` and `apistar validate <schema>`.
+* Added `webtypes docs <schema>` and `webtypes validate <schema>`.
 
 ### 0.5.12
 
@@ -212,7 +212,7 @@ yet made their way back in to the project:
 
 * The API Docs have not yet been re-introduced.
 * The command routing has not yet been re-introduced.
-* The `apistar` command line tool has not yet been re-introduced.
+* The `webtypes` command line tool has not yet been re-introduced.
 * The ORM components have been removed. We'll be pushing for this kind of functionality to be addressed as third-party packages instead.
 
 However the overall state of the project is in a much better place than it
@@ -231,4 +231,4 @@ If you do need to continue working against the 0.3 version, you should refer
 to [the older documentation on GitHub][0.3]. You should also make sure to serve any
 async applications using uvicorn <= 0.0.15, which uses the pre-ASGI interface style.
 
-[0.3]: https://github.com/encode/apistar/tree/0.3.9
+[0.3]: https://github.com/abetkin/webtypes/tree/0.3.9

@@ -1,8 +1,8 @@
 import pytest
 from pytest import param
 
-from apistar import Route, http, test
-from apistar.server.app import App, ASyncApp
+from webtypes import Route, http, test
+from webtypes.server.app import App, ASyncApp
 
 # HTTP Components as parameters
 

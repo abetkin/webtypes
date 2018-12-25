@@ -1,4 +1,4 @@
-from apistar.tokenize import DictToken, ListToken, ScalarToken, tokenize_json
+from webtypes.tokenize import DictToken, ListToken, ScalarToken, tokenize_json
 
 
 def test_tokenize_object():
