@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/abetkin/webtypes/master/docs/img/logo-200-square-light.png" alt="API Star" />
+    <img src="https://raw.githubusercontent.com/abetkin/webtypes/master/docs/img/logo-200-square-light.png" alt="webtypes" />
 </p>
 <p align="center">
     <em>A smart Web API framework, for Python 3.</em>
@@ -26,18 +26,18 @@
 
 # Features
 
-Why might you consider using API Star for your next Web API project?
+Why might you consider using webtypes for your next Web API project?
 
 * **Schema generation** - Support for automatically generating OpenAPI schemas.
 * **Expressive** - Type annotated views, that make for expressive, testable code.
-* **Performance** - Dynamic behaviour for determining how to run each view makes API Star incredibly efficient.
+* **Performance** - Dynamic behaviour for determining how to run each view makes webtypes incredibly efficient.
 * **Throughput** - Support for asyncio allows for building high-throughput non-blocking applications.
 
 ---
 
 # Quickstart
 
-Install API Star:
+Install webtypes:
 
 ```bash
 $ pip3 install webtypes
@@ -51,8 +51,8 @@ from webtypes import App, Route
 
 def welcome(name=None):
     if name is None:
-        return {'message': 'Welcome to API Star!'}
-    return {'message': 'Welcome to API Star, %s!' % name}
+        return {'message': 'Welcome to webtypes!'}
+    return {'message': 'Welcome to webtypes, %s!' % name}
 
 
 routes = [
@@ -72,7 +72,7 @@ Open `http://127.0.0.1:5000/docs/` in your browser:
 
 ---
 
-<p align="center"><i>API Star is <a href="https://github.com/tomchristie/webtypes/blob/master/LICENSE.md">BSD licensed</a> code.<br/>Designed & built in Brighton, England.</i>
+<p align="center"><i>webtypes is <a href="https://github.com/tomchristie/webtypes/blob/master/LICENSE.md">BSD licensed</a> code.<br/>Designed & built in Brighton, England.</i>
 <p align="center">
-    <img src="https://raw.githubusercontent.com/abetkin/webtypes/master/docs/img/ident-44-square-light.png" alt="API Star" />
+    <img src="https://raw.githubusercontent.com/abetkin/webtypes/master/docs/img/ident-44-square-light.png" alt="webtypes" />
 </p>

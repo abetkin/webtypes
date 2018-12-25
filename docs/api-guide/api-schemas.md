@@ -1,6 +1,6 @@
 # API Schemas
 
-By default API Star will serve [an Open API schema][openapi] for your
+By default webtypes will serve [an Open API schema][openapi] for your
 application, at `'/schema/'`.
 
 Let's take a look at that with a short example...
@@ -11,8 +11,8 @@ from webtypes import App, Route
 
 def welcome(name=None):
     if name is None:
-        return {'message': 'Welcome to API Star!'}
-    return {'message': 'Welcome to API Star, %s!' % name}
+        return {'message': 'Welcome to webtypes!'}
+    return {'message': 'Welcome to webtypes, %s!' % name}
 
 routes = [
     Route('/', method='GET', handler=welcome),

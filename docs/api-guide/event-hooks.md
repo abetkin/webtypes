@@ -2,7 +2,7 @@
 
 Sometimes you'll want to always run some code before or after a handler function.
 
-API Star provides something very similar to middleware, that lets you register
+webtypes provides something very similar to middleware, that lets you register
 a group of functions to be run in response to particular events.
 
 Here's an example...

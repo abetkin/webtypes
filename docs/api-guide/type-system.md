@@ -1,11 +1,11 @@
 # Type System
 
-API Star comes with a type system that allows you to express constraints on the
+webtypes comes with a type system that allows you to express constraints on the
 expected inputs and outputs of your interface.
 
 ## The `Type` class
 
-Here’s a quick example of what the type system in API Star looks like:
+Here’s a quick example of what the type system in webtypes looks like:
 
 ```python
 from webtypes import types, validators
@@ -70,7 +70,7 @@ class Event(types.Type):
 
 ## Validation
 
-You can use API Star `Type` classes as annotations inside your handler functions.
+You can use webtypes `Type` classes as annotations inside your handler functions.
 
 When you do so, validation will be handled automatically prior to running
 the handler function. The type information will also be made available

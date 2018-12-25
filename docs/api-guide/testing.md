@@ -1,10 +1,10 @@
 # Testing
 
-API Star isn't coupled to any particular testing framework.
+webtypes isn't coupled to any particular testing framework.
 
 One good option for writing your test cases is [the pytest framework][pytest].
 
-To make it easier to run tests against your application, API Star includes
+To make it easier to run tests against your application, webtypes includes
 a test client, that acts as an adapter for the excellent python `requests`
 library, allowing you to make requests directly to your application.
 

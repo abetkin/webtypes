@@ -322,7 +322,7 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
     border-radius: 6px 0 6px 6px;
 }
 
-/* API Star customisation */
+/* webtypes customisation */
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -465,4 +465,4 @@ pre code {
     border-color: #ccc;
 }
 
-/* End API Star customisation */
+/* End webtypes customisation */

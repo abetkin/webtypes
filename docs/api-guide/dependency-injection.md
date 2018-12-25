@@ -1,6 +1,6 @@
 # Dependency Injection
 
-API Star allows you to include various parameters on handler functions and
+webtypes allows you to include various parameters on handler functions and
 event hooks, and will automatically provide those parameters as required.
 
 You can add additional components, making them available to handler functions

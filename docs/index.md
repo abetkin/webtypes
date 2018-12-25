@@ -6,7 +6,7 @@
 
 # webtypes
 
-This is a fork of [API Star](https://github.com/encode/apistar) 0.5.*
+This is a fork of [webtypes](https://github.com/encode/apistar) 0.5.*
 
 <!-- [![Build Status](https://travis-ci.org/abetkin/webtypes.svg?branch=master)](https://travis-ci.org/abetkin/webtypes)
 [![codecov](https://codecov.io/gh/abetkin/webtypes/branch/master/graph/badge.svg)](https://codecov.io/gh/abetkin/webtypes)
@@ -20,7 +20,7 @@ This is a fork of [API Star](https://github.com/encode/apistar) 0.5.*
 
 ## Quickstart
 
-Install API Star:
+Install webtypes:
 
 ```bash
 $ pip3 install webtypes
@@ -34,8 +34,8 @@ from webtypes import App, Route
 
 def welcome(name=None):
     if name is None:
-        return {'message': 'Welcome to API Star!'}
-    return {'message': 'Welcome to API Star, %s!' % name}
+        return {'message': 'Welcome to webtypes!'}
+    return {'message': 'Welcome to webtypes, %s!' % name}
 
 
 routes = [

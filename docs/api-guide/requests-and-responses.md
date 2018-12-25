@@ -18,7 +18,7 @@ def echo_request_info(request: http.Request) -> dict:
     }
 ```
 
-API Star allows you to dynamically inject various other information about the
+webtypes allows you to dynamically inject various other information about the
 incoming request into your views using type annotation.
 
 ```python

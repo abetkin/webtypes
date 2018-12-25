@@ -206,7 +206,7 @@
 
 ### 0.4
 
-The Version 0.4 release is a significant re-working of the API Star codebase.
+The Version 0.4 release is a significant re-working of the webtypes codebase.
 As part of this there are a number of features that have been removed and not
 yet made their way back in to the project:
 

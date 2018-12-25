@@ -1,6 +1,6 @@
 # Applications
 
-The first thing you'll always need to do when creating a new API Star service
+The first thing you'll always need to do when creating a new webtypes service
 is to create an application instance.
 
 Here's an example that just returns a simple HTML homepage:
@@ -22,7 +22,7 @@ app = App(routes=routes)
 
 ## Sync or ASync
 
-API Star supports both multi-threaded (WSGI) and asyncio (ASGI) modes of operation.
+webtypes supports both multi-threaded (WSGI) and asyncio (ASGI) modes of operation.
 
 The Python ecosystem currently has far more support for multi-threaded concurrency.
 Most existing database adapters, ORMs, and other networking components are
@@ -66,6 +66,6 @@ if __name__ == '__main__':
 If `debug` is set to `True`, then the interactive debugger will be triggered on exceptions.
 If `debug` is not set, then exceptions will result in a 500 Server Error.
 
-You should only use `app.serve()` for local development. See the [deployment documentation][deployment] for information on running API Star in production.
+You should only use `app.serve()` for local development. See the [deployment documentation][deployment] for information on running webtypes in production.
 
 [deployment]: /api-guide/deployment

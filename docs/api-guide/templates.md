@@ -1,6 +1,6 @@
 # Templates
 
-API Star is particularly designed around building APIs, but is equally
+webtypes is particularly designed around building APIs, but is equally
 capable of being used to build web applications.
 
 ## Configuration
