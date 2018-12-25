@@ -4,17 +4,17 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="./img/favicon.ico">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
 
 
         <meta property="og:type" content="website" />
         <!--  Essential META Tags -->
-        <meta property="og:title" content="webtypes"
+        <meta property="og:title" content="Dependency Injection - webtypes"
         />
-        <meta property="og:description" content="None">
+        
 
         
         <meta name="twitter:card" content="summary_large_image">
@@ -22,11 +22,11 @@
         <!--  Non-Essential, But Recommended -->
         <meta property="og:site_name" content="webtypes">
         <meta name="twitter:image:alt" content="webtypes">
-        <title>webtypes - Docs</title>
-        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="./css/font-awesome.min.css" rel="stylesheet">
-        <link href="./css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/highlight.css">
+        <title>Dependency Injection - webtypes</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -34,12 +34,12 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="./js/jquery-1.10.2.min.js" defer></script>
-        <script src="./js/bootstrap-3.0.3.min.js" defer></script>
-        <script src="./js/highlight.pack.js" defer></script> 
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/highlight.pack.js" defer></script> 
     </head>
 
-    <body class="homepage">
+    <body>
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -60,10 +60,10 @@
         <div class="navbar-collapse collapse">
                 <!-- Main navigation -->
                 <ul class="nav navbar-nav">
-                    <li class="active">
+                    <li >
                         <a href="">Home</a>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">API Guide <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
@@ -99,7 +99,7 @@
     <a href="api-guide/event-hooks/">Event Hooks</a>
 </li>
                             
-<li >
+<li class="active">
     <a href="api-guide/dependency-injection/">Dependency Injection</a>
 </li>
                             
@@ -129,20 +129,20 @@
                         <i class="fa fa-search"></i> Search
                     </a>
                 </li>
-                    <li class="disabled">
-                        <a rel="next" >
+                    <li >
+                        <a rel="next" href="api-guide/event-hooks/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="api-guide/applications/">
+                        <a rel="prev" href="api-guide/testing/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
                 <li>
                     <a class="repo-link"
                      href="https://github.com/abetkin/webtypes/tree/master">
-                    <img src="./img/GitHub-Mark-Light-32px.png" alt="webtypes on GitHub" class="repo-img">
+                    <img src="../../img/GitHub-Mark-Light-32px.png" alt="webtypes on GitHub" class="repo-img">
                      
                     </a>
                 </li>
@@ -154,55 +154,188 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#webtypes">webtypes</a></li>
-            <li><a href="#quickstart">Quickstart</a></li>
+        <li class="main active"><a href="#dependency-injection">Dependency Injection</a></li>
+            <li><a href="#reference">Reference</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<div style="float: right">
-    <a href="https://travis-ci.org/abetkin/webtypes"><img style="border: none; background-color: transparent; margin: 0" alt="Build Status" src="https://travis-ci.org/abetkin/webtypes.svg?branch=master"></a>
-    <a href="https://codecov.io/gh/abetkin/webtypes"><img style="border: none; background-color: transparent; margin: 0" alt="codecov" src="https://codecov.io/gh/abetkin/webtypes/branch/master/graph/badge.svg"></a>
-    <a href="https://pypi.python.org/pypi/webtypes"><img style="border: none; background-color: transparent; margin: 0" alt="Package version" src="https://badge.fury.io/py/webtypes.svg"></a>
-</div>
-
-<h1 id="webtypes">webtypes</h1>
-<p>This is a fork of <a href="https://github.com/encode/apistar">webtypes</a> 0.5.*</p>
-<!-- [![Build Status](https://travis-ci.org/abetkin/webtypes.svg?branch=master)](https://travis-ci.org/abetkin/webtypes)
-[![codecov](https://codecov.io/gh/abetkin/webtypes/branch/master/graph/badge.svg)](https://codecov.io/gh/abetkin/webtypes)
-[![Package version](https://badge.fury.io/py/webtypes.svg)](https://pypi.python.org/pypi/webtypes) -->
-
-<p><strong>Community:</strong> <a href="https://discuss.apistar.org/">https://discuss.apistar.org/</a> 🤔 💭 🤓 💬 😎</p>
-<p><strong>Repository</strong>: <a href="https://github.com/abetkin/webtypes">https://github.com/abetkin/webtypes</a> 💻</p>
-<hr />
-<h2 id="quickstart">Quickstart</h2>
-<p>Install webtypes:</p>
-<pre><code class="bash">$ pip3 install webtypes
-</code></pre>
-
-<p>Create a new project in <code>app.py</code>:</p>
-<pre><code class="python">from webtypes import App, Route
+<h1 id="dependency-injection">Dependency Injection</h1>
+<p>webtypes allows you to include various parameters on handler functions and
+event hooks, and will automatically provide those parameters as required.</p>
+<p>You can add additional components, making them available to handler functions
+if they are included in an annotation.</p>
+<p>Here's an example that makes the <code>User</code> annotation available to handler functions.</p>
+<pre><code class="python">from webtypes import App, Route, exceptions, http
+from webtypes.server.components import Component
 
 
-def welcome(name=None):
-    if name is None:
-        return {'message': 'Welcome to webtypes!'}
-    return {'message': 'Welcome to webtypes, %s!' % name}
+class User(object):
+    def __init__(self, username: str):
+        self.username = username
+
+
+class UserComponent(Component):
+    def resolve(self, authorization: http.Header) -&gt; User:
+        &quot;&quot;&quot;
+        Determine the user associated with a request, using HTTP Basic Authentication.
+        &quot;&quot;&quot;
+        if authorization is None:
+            return None
+
+        scheme, token = authorization.split()
+        if scheme.lower() != 'basic':
+            return None
+
+        username, password = base64.b64decode(token).decode('utf-8').split(':')
+        if not self.check_authentication(username, password):
+            raise exceptions.Forbidden('Incorrect username or password.')
+
+        return User(username)
+
+    def check_authentication(self, username: str, password: str) -&gt; bool:
+        # Just an example here. You'd normally want to make a database lookup,
+        # and check against a hash of the password.
+        return password == 'secret'
+
+
+def hello_user(user: User=None) -&gt; dict:
+    return {'hello': user.username if user else None}
 
 
 routes = [
-    Route('/', method='GET', handler=welcome),
+    Route('/', method='GET', handler=hello_user)
 ]
+components = [UserComponent()]
 
-app = App(routes=routes)
-
-
-if __name__ == '__main__':
-    app.serve('127.0.0.1', 5000, debug=True)
+app = App(routes=routes, components=components)
 </code></pre>
 
-<p>Open <code>http://127.0.0.1:5000/docs/</code> in your browser:</p>
-<p><img alt="API documentation" src="img/api-docs.png" /></p></div>
+<p>You can combine components and event hooks in order to have a component
+that always runs, regardless of if it is used in a handler function.</p>
+<pre><code class="python">class MustBeAuthenticated():
+    def on_request(self, user: User=None) -&gt; None:
+        if user is None:
+            raise exceptions.NotAuthenticated()
+
+
+def hello_user(user: User) -&gt; dict:
+    return {'hello': user.username}
+
+
+routes = [
+    Route('/', method='GET', handler=hello_user)
+]
+components = [UserComponent()]
+event_hooks = [MustBeAuthenticated()]
+
+app = App(routes=routes, components=components, event_hooks=event_hooks)
+</code></pre>
+
+<h2 id="reference">Reference</h2>
+<p>The following components are already installed by default.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>http.Method</td>
+<td>The http method, as an uppercased string.</td>
+</tr>
+<tr>
+<td>http.URL</td>
+<td>The full request URL, as a string-like object.</td>
+</tr>
+<tr>
+<td>http.Scheme</td>
+<td>The scheme, either <code>http</code> or <code>https</code>.</td>
+</tr>
+<tr>
+<td>http.Host</td>
+<td>The server hostname, as a string.</td>
+</tr>
+<tr>
+<td>http.Port</td>
+<td>The server port, as an integer.</td>
+</tr>
+<tr>
+<td>http.Path</td>
+<td>The URL path, excluding any querystring.</td>
+</tr>
+<tr>
+<td>http.QueryString</td>
+<td>The querystring from the URL. eg. "color=red&amp;size=medium".</td>
+</tr>
+<tr>
+<td>http.QueryParam</td>
+<td>A single query parameter, looked up against the parameter name.</td>
+</tr>
+<tr>
+<td>http.Headers</td>
+<td>A multidict</td>
+</tr>
+<tr>
+<td>http.Header</td>
+<td>A single query parameter, looked up against the parameter name.</td>
+</tr>
+<tr>
+<td>http.Body</td>
+<td>The request body, as a bytestring.</td>
+</tr>
+<tr>
+<td>http.Request</td>
+<td>The incoming request. Includes <code>url</code>, <code>method</code>, <code>headers</code>, and <code>body</code> attributes.</td>
+</tr>
+<tr>
+<td>http.Response</td>
+<td>The outgoing response. Only available to event hooks that run after the main handler function.</td>
+</tr>
+<tr>
+<td>http.PathParams</td>
+<td>The matched path parameters for the incoming request.</td>
+</tr>
+<tr>
+<td>App</td>
+<td>The current application. Made available as <code>App</code> for both multithreaded and async applications.</td>
+</tr>
+<tr>
+<td>Route</td>
+<td>The matched route for the incoming request.</td>
+</tr>
+<tr>
+<td>Exception</td>
+<td><code>None</code> unless exception handling is running.</td>
+</tr>
+<tr>
+<td>server.wsgi.WSGIEnviron</td>
+<td>Only for <code>App</code>.</td>
+</tr>
+<tr>
+<td>server.wsgi.WSGIStartResponse</td>
+<td>Only for <code>App</code>.</td>
+</tr>
+<tr>
+<td>server.asgi.ASGIScope</td>
+<td>Only for <code>ASyncApp</code>.</td>
+</tr>
+<tr>
+<td>server.asgi.ASGIReceive</td>
+<td>Only for <code>ASyncApp</code>.</td>
+</tr>
+<tr>
+<td>server.asgi.ASGISend</td>
+<td>Only for <code>ASyncApp</code>.</td>
+</tr>
+<tr>
+<td>server.components.ReturnValue</td>
+<td>Used internally to access the return value of the preceeding function in a dependency injection chain.</td>
+</tr>
+</tbody>
+</table></div>
         </div>
 
         <footer class="col-md-12">
@@ -213,12 +346,12 @@ if __name__ == '__main__':
                 <a href="https://github.com/tomchristie/webtypes/blob/master/LICENSE.md">BSD licensed</a> code.
                 <br/>Designed & built in Brighton, England.</i>
               <p align="center">
-                <img src="./img/logomarque.png" alt="webtypes" class="footer-logo">
+                <img src="../../img/logomarque.png" alt="webtypes" class="footer-logo">
               </p>
         </footer>
-        <script>var base_url = '.';</script>
-        <script src="./js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script>var base_url = '../..';</script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
@@ -287,8 +420,3 @@ if __name__ == '__main__':
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.0.4
-Build Date UTC : 2018-12-25 11:17:58
--->

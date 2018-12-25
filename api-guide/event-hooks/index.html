@@ -4,17 +4,17 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="./img/favicon.ico">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
 
 
         <meta property="og:type" content="website" />
         <!--  Essential META Tags -->
-        <meta property="og:title" content="webtypes"
+        <meta property="og:title" content="Event Hooks - webtypes"
         />
-        <meta property="og:description" content="None">
+        
 
         
         <meta name="twitter:card" content="summary_large_image">
@@ -22,11 +22,11 @@
         <!--  Non-Essential, But Recommended -->
         <meta property="og:site_name" content="webtypes">
         <meta name="twitter:image:alt" content="webtypes">
-        <title>webtypes - Docs</title>
-        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="./css/font-awesome.min.css" rel="stylesheet">
-        <link href="./css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/highlight.css">
+        <title>Event Hooks - webtypes</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -34,12 +34,12 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="./js/jquery-1.10.2.min.js" defer></script>
-        <script src="./js/bootstrap-3.0.3.min.js" defer></script>
-        <script src="./js/highlight.pack.js" defer></script> 
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/highlight.pack.js" defer></script> 
     </head>
 
-    <body class="homepage">
+    <body>
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -60,10 +60,10 @@
         <div class="navbar-collapse collapse">
                 <!-- Main navigation -->
                 <ul class="nav navbar-nav">
-                    <li class="active">
+                    <li >
                         <a href="">Home</a>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">API Guide <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
@@ -95,7 +95,7 @@
     <a href="api-guide/api-schemas/">API Schemas</a>
 </li>
                             
-<li >
+<li class="active">
     <a href="api-guide/event-hooks/">Event Hooks</a>
 </li>
                             
@@ -129,20 +129,20 @@
                         <i class="fa fa-search"></i> Search
                     </a>
                 </li>
-                    <li class="disabled">
-                        <a rel="next" >
+                    <li >
+                        <a rel="next" href="api-guide/api-schemas/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="api-guide/applications/">
+                        <a rel="prev" href="api-guide/dependency-injection/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
                 <li>
                     <a class="repo-link"
                      href="https://github.com/abetkin/webtypes/tree/master">
-                    <img src="./img/GitHub-Mark-Light-32px.png" alt="webtypes on GitHub" class="repo-img">
+                    <img src="../../img/GitHub-Mark-Light-32px.png" alt="webtypes on GitHub" class="repo-img">
                      
                     </a>
                 </li>
@@ -154,55 +154,80 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#webtypes">webtypes</a></li>
-            <li><a href="#quickstart">Quickstart</a></li>
+        <li class="main active"><a href="#event-hooks">Event Hooks</a></li>
+            <li><a href="#error-handling">Error handling</a></li>
+            <li><a href="#using-event-hooks">Using event hooks</a></li>
+            <li><a href="#ordering-of-event-hooks">Ordering of event hooks</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<div style="float: right">
-    <a href="https://travis-ci.org/abetkin/webtypes"><img style="border: none; background-color: transparent; margin: 0" alt="Build Status" src="https://travis-ci.org/abetkin/webtypes.svg?branch=master"></a>
-    <a href="https://codecov.io/gh/abetkin/webtypes"><img style="border: none; background-color: transparent; margin: 0" alt="codecov" src="https://codecov.io/gh/abetkin/webtypes/branch/master/graph/badge.svg"></a>
-    <a href="https://pypi.python.org/pypi/webtypes"><img style="border: none; background-color: transparent; margin: 0" alt="Package version" src="https://badge.fury.io/py/webtypes.svg"></a>
-</div>
+<h1 id="event-hooks">Event Hooks</h1>
+<p>Sometimes you'll want to always run some code before or after a handler function.</p>
+<p>webtypes provides something very similar to middleware, that lets you register
+a group of functions to be run in response to particular events.</p>
+<p>Here's an example...</p>
+<pre><code class="python">class CustomHeadersHook:
+    def on_response(self, response: http.Response):
+        response.headers['x-custom'] = 'Ran on_response()'
 
-<h1 id="webtypes">webtypes</h1>
-<p>This is a fork of <a href="https://github.com/encode/apistar">webtypes</a> 0.5.*</p>
-<!-- [![Build Status](https://travis-ci.org/abetkin/webtypes.svg?branch=master)](https://travis-ci.org/abetkin/webtypes)
-[![codecov](https://codecov.io/gh/abetkin/webtypes/branch/master/graph/badge.svg)](https://codecov.io/gh/abetkin/webtypes)
-[![Package version](https://badge.fury.io/py/webtypes.svg)](https://pypi.python.org/pypi/webtypes) -->
+event_hooks = [CustomHeadersHook]
 
-<p><strong>Community:</strong> <a href="https://discuss.apistar.org/">https://discuss.apistar.org/</a> 🤔 💭 🤓 💬 😎</p>
-<p><strong>Repository</strong>: <a href="https://github.com/abetkin/webtypes">https://github.com/abetkin/webtypes</a> 💻</p>
-<hr />
-<h2 id="quickstart">Quickstart</h2>
-<p>Install webtypes:</p>
-<pre><code class="bash">$ pip3 install webtypes
+app = App(routes=routes, event_hooks=event_hooks)
 </code></pre>
 
-<p>Create a new project in <code>app.py</code>:</p>
-<pre><code class="python">from webtypes import App, Route
+<p>An event hook instance may include any or all of the following methods:</p>
+<ul>
+<li><code>on_request(self, ...)</code> - Runs before the handler function.</li>
+<li><code>on_response(self, ...)</code> - Runs after the handler function, or when a handled exception occurs.</li>
+<li><code>on_error(self, ...)</code> - Runs after any unhandled exception occurs.</li>
+</ul>
+<p>The signature of the method may include any annotations that would be available
+on a handler function, or the <code>http.Response</code> annotation.</p>
+<h2 id="error-handling">Error handling</h2>
+<p>Subclasses of <code>HTTPException</code> are dealt with by the applications exception handler,
+and return responses, that pass through any <code>on_response</code> hooks as usual.</p>
+<p>Unhandled exceptions result in server errors, and should be treated differently.
+For these cases, any installed <code>on_error</code> event hooks will be run. This event hook
+allows you to monitor or log exceptions.</p>
+<p>It's recommend that use of <code>on_error</code> event hooks should be kept to a minimum,
+dealing only with whatever error monitoring is required.</p>
+<h2 id="using-event-hooks">Using event hooks</h2>
+<p>Event hooks can pull in components such as the request, the returned response,
+or the exception that resulted in a response. For example:</p>
+<pre><code class="python">class ErrorHandlingHook:
+    def on_response(self, response: http.Response, exc: Exception):
+        if exc is None:
+            print(&quot;Handler returned a response&quot;)
+        else:
+            print(&quot;Exception handler returned a response&quot;)
+
+    def on_error(self, response: http.Response):
+        print(&quot;An unhandled error was raised&quot;)
 
 
-def welcome(name=None):
-    if name is None:
-        return {'message': 'Welcome to webtypes!'}
-    return {'message': 'Welcome to webtypes, %s!' % name}
-
-
-routes = [
-    Route('/', method='GET', handler=welcome),
-]
-
-app = App(routes=routes)
-
-
-if __name__ == '__main__':
-    app.serve('127.0.0.1', 5000, debug=True)
+app = App(routes=routes, event_hooks=[ErrorHandlingHook])
 </code></pre>
 
-<p>Open <code>http://127.0.0.1:5000/docs/</code> in your browser:</p>
-<p><img alt="API documentation" src="img/api-docs.png" /></p></div>
+<p>Event hooks are instantiated at the start of every request/response cycle, and can
+store state between the request and response events.</p>
+<pre><code class="python">class TimingHook:
+    def on_request(self):
+        self.started = time.time()
+
+    def on_response(self):
+        duration = time.time() - self.started
+        print(&quot;Response returned in %0.6f seconds.&quot; % duration)
+
+
+app = App(routes=routes, event_hooks=[TimingHook])
+</code></pre>
+
+<h2 id="ordering-of-event-hooks">Ordering of event hooks</h2>
+<p>The <code>on_request</code> hooks are run in the order that their classes are included.</p>
+<p>The <code>on_response</code> and <code>on_error</code> hooks are run in the reverse order that their classes are included.</p>
+<p>This behaviour ensures that event hooks run in a similar manner to stack-based middleware,
+with the each event hook wrapping everything that comes after it.</p></div>
         </div>
 
         <footer class="col-md-12">
@@ -213,12 +238,12 @@ if __name__ == '__main__':
                 <a href="https://github.com/tomchristie/webtypes/blob/master/LICENSE.md">BSD licensed</a> code.
                 <br/>Designed & built in Brighton, England.</i>
               <p align="center">
-                <img src="./img/logomarque.png" alt="webtypes" class="footer-logo">
+                <img src="../../img/logomarque.png" alt="webtypes" class="footer-logo">
               </p>
         </footer>
-        <script>var base_url = '.';</script>
-        <script src="./js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script>var base_url = '../..';</script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
@@ -287,8 +312,3 @@ if __name__ == '__main__':
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.0.4
-Build Date UTC : 2018-12-25 11:17:58
--->

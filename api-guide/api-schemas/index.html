@@ -4,17 +4,17 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="./img/favicon.ico">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
 
 
         <meta property="og:type" content="website" />
         <!--  Essential META Tags -->
-        <meta property="og:title" content="webtypes"
+        <meta property="og:title" content="API Schemas - webtypes"
         />
-        <meta property="og:description" content="None">
+        
 
         
         <meta name="twitter:card" content="summary_large_image">
@@ -22,11 +22,11 @@
         <!--  Non-Essential, But Recommended -->
         <meta property="og:site_name" content="webtypes">
         <meta name="twitter:image:alt" content="webtypes">
-        <title>webtypes - Docs</title>
-        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="./css/font-awesome.min.css" rel="stylesheet">
-        <link href="./css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/highlight.css">
+        <title>API Schemas - webtypes</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -34,12 +34,12 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="./js/jquery-1.10.2.min.js" defer></script>
-        <script src="./js/bootstrap-3.0.3.min.js" defer></script>
-        <script src="./js/highlight.pack.js" defer></script> 
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/highlight.pack.js" defer></script> 
     </head>
 
-    <body class="homepage">
+    <body>
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -60,10 +60,10 @@
         <div class="navbar-collapse collapse">
                 <!-- Main navigation -->
                 <ul class="nav navbar-nav">
-                    <li class="active">
+                    <li >
                         <a href="">Home</a>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">API Guide <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
@@ -91,7 +91,7 @@
     <a href="api-guide/type-system/">The Type System</a>
 </li>
                             
-<li >
+<li class="active">
     <a href="api-guide/api-schemas/">API Schemas</a>
 </li>
                             
@@ -129,20 +129,20 @@
                         <i class="fa fa-search"></i> Search
                     </a>
                 </li>
-                    <li class="disabled">
-                        <a rel="next" >
+                    <li >
+                        <a rel="next" href="api-guide/type-system/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="api-guide/applications/">
+                        <a rel="prev" href="api-guide/event-hooks/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
                 <li>
                     <a class="repo-link"
                      href="https://github.com/abetkin/webtypes/tree/master">
-                    <img src="./img/GitHub-Mark-Light-32px.png" alt="webtypes on GitHub" class="repo-img">
+                    <img src="../../img/GitHub-Mark-Light-32px.png" alt="webtypes on GitHub" class="repo-img">
                      
                     </a>
                 </li>
@@ -154,33 +154,15 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#webtypes">webtypes</a></li>
-            <li><a href="#quickstart">Quickstart</a></li>
+        <li class="main active"><a href="#api-schemas">API Schemas</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<div style="float: right">
-    <a href="https://travis-ci.org/abetkin/webtypes"><img style="border: none; background-color: transparent; margin: 0" alt="Build Status" src="https://travis-ci.org/abetkin/webtypes.svg?branch=master"></a>
-    <a href="https://codecov.io/gh/abetkin/webtypes"><img style="border: none; background-color: transparent; margin: 0" alt="codecov" src="https://codecov.io/gh/abetkin/webtypes/branch/master/graph/badge.svg"></a>
-    <a href="https://pypi.python.org/pypi/webtypes"><img style="border: none; background-color: transparent; margin: 0" alt="Package version" src="https://badge.fury.io/py/webtypes.svg"></a>
-</div>
-
-<h1 id="webtypes">webtypes</h1>
-<p>This is a fork of <a href="https://github.com/encode/apistar">webtypes</a> 0.5.*</p>
-<!-- [![Build Status](https://travis-ci.org/abetkin/webtypes.svg?branch=master)](https://travis-ci.org/abetkin/webtypes)
-[![codecov](https://codecov.io/gh/abetkin/webtypes/branch/master/graph/badge.svg)](https://codecov.io/gh/abetkin/webtypes)
-[![Package version](https://badge.fury.io/py/webtypes.svg)](https://pypi.python.org/pypi/webtypes) -->
-
-<p><strong>Community:</strong> <a href="https://discuss.apistar.org/">https://discuss.apistar.org/</a> 🤔 💭 🤓 💬 😎</p>
-<p><strong>Repository</strong>: <a href="https://github.com/abetkin/webtypes">https://github.com/abetkin/webtypes</a> 💻</p>
-<hr />
-<h2 id="quickstart">Quickstart</h2>
-<p>Install webtypes:</p>
-<pre><code class="bash">$ pip3 install webtypes
-</code></pre>
-
-<p>Create a new project in <code>app.py</code>:</p>
+<h1 id="api-schemas">API Schemas</h1>
+<p>By default webtypes will serve <a href="https://github.com/OAI/OpenAPI-Specification">an Open API schema</a> for your
+application, at <code>'/schema/'</code>.</p>
+<p>Let's take a look at that with a short example...</p>
 <pre><code class="python">from webtypes import App, Route
 
 
@@ -188,7 +170,6 @@ def welcome(name=None):
     if name is None:
         return {'message': 'Welcome to webtypes!'}
     return {'message': 'Welcome to webtypes, %s!' % name}
-
 
 routes = [
     Route('/', method='GET', handler=welcome),
@@ -198,11 +179,42 @@ app = App(routes=routes)
 
 
 if __name__ == '__main__':
-    app.serve('127.0.0.1', 5000, debug=True)
+    app.serve('127.0.0.1', 8080, use_debugger=True)
 </code></pre>
 
-<p>Open <code>http://127.0.0.1:5000/docs/</code> in your browser:</p>
-<p><img alt="API documentation" src="img/api-docs.png" /></p></div>
+<p>Start the application running...</p>
+<pre><code class="bash">$ python ./example.py
+ * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+</code></pre>
+
+<p>And download the schema...</p>
+<pre><code class="bash">$ curl http://127.0.0.1:8080/schema/
+{
+    &quot;openapi&quot;: &quot;3.0.0&quot;,
+    &quot;info&quot;: {
+        &quot;title&quot;: &quot;&quot;,
+        &quot;description&quot;: &quot;&quot;,
+        &quot;version&quot;: &quot;&quot;
+    },
+    &quot;paths&quot;: {
+        &quot;/&quot;: {
+            &quot;get&quot;: {
+                &quot;operationId&quot;: &quot;welcome&quot;,
+                &quot;parameters&quot;: [
+                    {
+                        &quot;name&quot;: &quot;name&quot;,
+                        &quot;in&quot;: &quot;query&quot;
+                    }
+                ]
+            }
+        }
+    }
+}
+</code></pre>
+
+<p>You can disable the schema generation by using the <code>schema_url</code> argument.</p>
+<pre><code class="python">app = App(routes=routes, schema_url=None)
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">
@@ -213,12 +225,12 @@ if __name__ == '__main__':
                 <a href="https://github.com/tomchristie/webtypes/blob/master/LICENSE.md">BSD licensed</a> code.
                 <br/>Designed & built in Brighton, England.</i>
               <p align="center">
-                <img src="./img/logomarque.png" alt="webtypes" class="footer-logo">
+                <img src="../../img/logomarque.png" alt="webtypes" class="footer-logo">
               </p>
         </footer>
-        <script>var base_url = '.';</script>
-        <script src="./js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script>var base_url = '../..';</script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
@@ -287,8 +299,3 @@ if __name__ == '__main__':
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.0.4
-Build Date UTC : 2018-12-25 11:17:58
--->

@@ -4,17 +4,17 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="./img/favicon.ico">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
 
 
         <meta property="og:type" content="website" />
         <!--  Essential META Tags -->
-        <meta property="og:title" content="webtypes"
+        <meta property="og:title" content="Requests and Responses - webtypes"
         />
-        <meta property="og:description" content="None">
+        
 
         
         <meta name="twitter:card" content="summary_large_image">
@@ -22,11 +22,11 @@
         <!--  Non-Essential, But Recommended -->
         <meta property="og:site_name" content="webtypes">
         <meta name="twitter:image:alt" content="webtypes">
-        <title>webtypes - Docs</title>
-        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="./css/font-awesome.min.css" rel="stylesheet">
-        <link href="./css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/highlight.css">
+        <title>Requests and Responses - webtypes</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -34,12 +34,12 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="./js/jquery-1.10.2.min.js" defer></script>
-        <script src="./js/bootstrap-3.0.3.min.js" defer></script>
-        <script src="./js/highlight.pack.js" defer></script> 
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/highlight.pack.js" defer></script> 
     </head>
 
-    <body class="homepage">
+    <body>
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -60,10 +60,10 @@
         <div class="navbar-collapse collapse">
                 <!-- Main navigation -->
                 <ul class="nav navbar-nav">
-                    <li class="active">
+                    <li >
                         <a href="">Home</a>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">API Guide <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
@@ -71,7 +71,7 @@
     <a href="api-guide/applications/">Applications</a>
 </li>
                             
-<li >
+<li class="active">
     <a href="api-guide/requests-and-responses/">Requests and Responses</a>
 </li>
                             
@@ -129,20 +129,20 @@
                         <i class="fa fa-search"></i> Search
                     </a>
                 </li>
-                    <li class="disabled">
-                        <a rel="next" >
+                    <li >
+                        <a rel="next" href="api-guide/applications/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="api-guide/applications/">
+                        <a rel="prev" href="api-guide/routing/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
                 <li>
                     <a class="repo-link"
                      href="https://github.com/abetkin/webtypes/tree/master">
-                    <img src="./img/GitHub-Mark-Light-32px.png" alt="webtypes on GitHub" class="repo-img">
+                    <img src="../../img/GitHub-Mark-Light-32px.png" alt="webtypes on GitHub" class="repo-img">
                      
                     </a>
                 </li>
@@ -154,55 +154,111 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#webtypes">webtypes</a></li>
-            <li><a href="#quickstart">Quickstart</a></li>
+        <li class="main active"><a href="#requests-and-responses">Requests and Responses</a></li>
+            <li><a href="#requests">Requests</a></li>
+            <li><a href="#responses">Responses</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<div style="float: right">
-    <a href="https://travis-ci.org/abetkin/webtypes"><img style="border: none; background-color: transparent; margin: 0" alt="Build Status" src="https://travis-ci.org/abetkin/webtypes.svg?branch=master"></a>
-    <a href="https://codecov.io/gh/abetkin/webtypes"><img style="border: none; background-color: transparent; margin: 0" alt="codecov" src="https://codecov.io/gh/abetkin/webtypes/branch/master/graph/badge.svg"></a>
-    <a href="https://pypi.python.org/pypi/webtypes"><img style="border: none; background-color: transparent; margin: 0" alt="Package version" src="https://badge.fury.io/py/webtypes.svg"></a>
-</div>
+<h1 id="requests-and-responses">Requests and Responses</h1>
+<h2 id="requests">Requests</h2>
+<p>To access the incoming HTTP request, use the <code>http.Request</code> class as an
+annotation on the handler function.</p>
+<pre><code class="python">from webtypes import http
 
-<h1 id="webtypes">webtypes</h1>
-<p>This is a fork of <a href="https://github.com/encode/apistar">webtypes</a> 0.5.*</p>
-<!-- [![Build Status](https://travis-ci.org/abetkin/webtypes.svg?branch=master)](https://travis-ci.org/abetkin/webtypes)
-[![codecov](https://codecov.io/gh/abetkin/webtypes/branch/master/graph/badge.svg)](https://codecov.io/gh/abetkin/webtypes)
-[![Package version](https://badge.fury.io/py/webtypes.svg)](https://pypi.python.org/pypi/webtypes) -->
 
-<p><strong>Community:</strong> <a href="https://discuss.apistar.org/">https://discuss.apistar.org/</a> 🤔 💭 🤓 💬 😎</p>
-<p><strong>Repository</strong>: <a href="https://github.com/abetkin/webtypes">https://github.com/abetkin/webtypes</a> 💻</p>
-<hr />
-<h2 id="quickstart">Quickstart</h2>
-<p>Install webtypes:</p>
-<pre><code class="bash">$ pip3 install webtypes
+def echo_request_info(request: http.Request) -&gt; dict:
+    return {
+        'method': request.method,
+        'url': request.url,
+        'headers': dict(request.headers),
+        'body': request.body.decode('utf-8')
+    }
 </code></pre>
 
-<p>Create a new project in <code>app.py</code>:</p>
-<pre><code class="python">from webtypes import App, Route
+<p>webtypes allows you to dynamically inject various other information about the
+incoming request into your views using type annotation.</p>
+<pre><code class="python">from webtypes import http
 
 
-def welcome(name=None):
-    if name is None:
-        return {'message': 'Welcome to webtypes!'}
-    return {'message': 'Welcome to webtypes, %s!' % name}
+def echo_query_params(query_params: http.QueryParams) -&gt; dict:
+    return {
+        'params': dict(query_params)
+    }
 
-
-routes = [
-    Route('/', method='GET', handler=welcome),
-]
-
-app = App(routes=routes)
-
-
-if __name__ == '__main__':
-    app.serve('127.0.0.1', 5000, debug=True)
+def echo_user_agent(user_agent: http.Header) -&gt; dict:
+    return {
+        'user-agent': user_agent
+    }
 </code></pre>
 
-<p>Open <code>http://127.0.0.1:5000/docs/</code> in your browser:</p>
-<p><img alt="API documentation" src="img/api-docs.png" /></p></div>
+<p>Some of the components you might use most often:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>http.Request</code></td>
+<td>The HTTP request. Includes <code>.method</code>, <code>.url</code>, and <code>.headers</code> attributes.</td>
+</tr>
+<tr>
+<td><code>http.Headers</code></td>
+<td>The request headers, returned as a dictionary-like object.</td>
+</tr>
+<tr>
+<td><code>http.Header</code></td>
+<td>Lookup a single request header, corresponding to the argument name.<br/>Returns a string or <code>None</code>.</td>
+</tr>
+<tr>
+<td><code>http.QueryParams</code></td>
+<td>The request query parameters, returned as a dictionary-like object.</td>
+</tr>
+<tr>
+<td><code>http.QueryParam</code></td>
+<td>Lookup a single query parameter, corresponding to the argument name.<br/>Returns a string or <code>None</code>.</td>
+</tr>
+<tr>
+<td><code>http.Body</code></td>
+<td>The request body, as a bytestring.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="responses">Responses</h2>
+<p>By default API star uses HTML responses for handlers that return strings,
+and JSON responses for anything else.</p>
+<pre><code class="python">def hello_world() -&gt; dict:
+    return {'text': 'Hello, world!'}
+</code></pre>
+
+<p>For more control over the response use the <code>JSONResponse</code> and
+<code>HTMLResponse</code> classes.</p>
+<pre><code class="python">from webtypes import http
+
+
+def hello_world(accept_language: http.Header) -&gt; http.JSONResponse:
+    if 'de' in accept_language:
+        data = {'text': 'Hallo, Welt!'}
+    else:
+        data = {'text': 'Hello, world!'}
+    headers = {'Vary': 'Accept-Language'}
+    return http.JSONResponse(data, status_code=200, headers=headers)
+</code></pre>
+
+<p>For other content types, use a <code>Response</code> class, and set the content-type
+header explicitly.</p>
+<pre><code class="python">from webtypes import http
+
+
+def hello_world() -&gt; http.Response:
+    content = 'Hello, world!'
+    headers = {'Content-Type': 'text/plain'}
+    return http.Response(content, headers=headers)
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">
@@ -213,12 +269,12 @@ if __name__ == '__main__':
                 <a href="https://github.com/tomchristie/webtypes/blob/master/LICENSE.md">BSD licensed</a> code.
                 <br/>Designed & built in Brighton, England.</i>
               <p align="center">
-                <img src="./img/logomarque.png" alt="webtypes" class="footer-logo">
+                <img src="../../img/logomarque.png" alt="webtypes" class="footer-logo">
               </p>
         </footer>
-        <script>var base_url = '.';</script>
-        <script src="./js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script>var base_url = '../..';</script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
@@ -287,8 +343,3 @@ if __name__ == '__main__':
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.0.4
-Build Date UTC : 2018-12-25 11:17:58
--->
